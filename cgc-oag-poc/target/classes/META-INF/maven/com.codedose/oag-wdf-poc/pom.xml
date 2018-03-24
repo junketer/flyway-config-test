@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.codedose</groupId>
+	<artifactId>oag-wdf-poc</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.targetEncoding>UTF-8</project.build.targetEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<java.version>1.8</java.version>
+		<scala.version>2.11</scala.version>
+		<spark.version>2.3.0-SNAPSHOT</spark.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/thirdParty</outputDirectory>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.sonar</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.7</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>cluster</id>
+			<dependencies>
+				<!--Spark -->
+				<dependency>
+					<groupId>org.apache.spark</groupId>
+					<artifactId>spark-core_${scala.version}</artifactId>
+					<version>${spark.version}</version>
+					<scope>provided</scope>
+				</dependency>
+
+				<!-- Spark SQL -->
+				<dependency>
+					<groupId>org.apache.spark</groupId>
+					<artifactId>spark-sql_${scala.version}</artifactId>
+					<version>${spark.version}</version>
+					<scope>provided</scope>
+				</dependency>
+			</dependencies>
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-shade-plugin</artifactId>
+						<version>3.0.0</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>shade</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>local</id>
+			<dependencies>
+				<!--Spark -->
+				<dependency>
+					<groupId>org.apache.spark</groupId>
+					<artifactId>spark-core_${scala.version}</artifactId>
+					<version>${spark.version}</version>
+					<scope>compile</scope>
+				</dependency>
+
+				<!-- Spark SQL -->
+				<dependency>
+					<groupId>org.apache.spark</groupId>
+					<artifactId>spark-sql_${scala.version}</artifactId>
+					<version>${spark.version}</version>
+					<scope>compile</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<!--Spark -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- Spark SQL -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+
+		<!-- JDBC Fluent API -->
+		<dependency>
+			<groupId>com.jcabi</groupId>
+			<artifactId>jcabi-jdbc</artifactId>
+			<version>0.16</version>
+		</dependency>
+
+		<!-- Unit test dependencies -->
+		<dependency>
+			<groupId>com.holdenkarau</groupId>
+			<artifactId>spark-testing-base_2.10</artifactId>
+			<version>2.1.1_0.7.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-hive_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Faker generator -->
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>0.13</version>
+		</dependency>
+
+		<!-- DB2 JDBC driver -->
+		<dependency>
+			<groupId>ibm</groupId>
+			<artifactId>db2jcc4</artifactId>
+			<version>9.5</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oag.common</groupId>
+			<artifactId>CommonSchedulesXml</artifactId>
+			<version>0.0.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
+		<!--<dependency> -->
+		<!--<groupId>com.ibm</groupId> -->
+		<!--<artifactId>db2jcc</artifactId> -->
+		<!--<version>9</version> -->
+		<!--</dependency> -->
+		<!--<dependency> -->
+		<!--<groupId>com.ibm</groupId> -->
+		<!--<artifactId>db2jcc_license_cu</artifactId> -->
+		<!--<version>9</version> -->
+		<!--</dependency> -->
+
+	</dependencies>
+</project>
