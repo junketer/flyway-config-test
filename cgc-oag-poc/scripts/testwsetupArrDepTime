@@ -1,0 +1,12 @@
+//TESTED
+val withArrivalTime = ivListProcessing.adjustArrivalDepartureLocalTime(enrichedLegs)
+val withArrivalTimeAdj = ivListProcessingAdj.adjustArrivalDepartureLocalTime(enrichedLegs)
+val midnightCount = withArrivalTime.where(col("arr_time_lcl").equalTo("2359")).count
+val midnightCountAdj = withArrivalTimeAdj.where(col("arr_time_lcl").equalTo("2359")).count
+//val midnightCount = withArrivalTime.where(col("arr_time_lcl").equalTo("00:00:00")).count
+assert(midnightCount == 7433)
+assert(midnightCountAdj == 7955)
+
+
+
+

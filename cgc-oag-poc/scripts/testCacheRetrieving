@@ -1,0 +1,7 @@
+        cacheDFs.setPassengerClassDF(p.get("PassengerClass"));
+        cacheDFs.setPortsDF(p.get("Ports"));
+        cacheDFs.setPortTimezoneIATADF(p.get("PortTimezoneIATA"));
+        cacheDFs.setPortTimezoneOAGDF(p.get("PortTimezoneOAG"));
+        cacheDFs.setPortToRegionDF(p.get("PortToRegion"));
+        cacheDFs.setSeatsDF(p.get("SeatsCache"));
+

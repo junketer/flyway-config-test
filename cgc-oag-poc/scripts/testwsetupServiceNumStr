@@ -1,0 +1,3 @@
+val withServiceNumStr = ivListProcessing.addServiceNumStr(enrichedLegs)
+val withServiceNumStrCount = withServiceNumStr.where(col("service_num_str").equalTo("0001")).count()
+assert(50 == withServiceNumStrCount)
