@@ -1,4 +1,4 @@
-@regression,@commit
+@regression
 Feature: Initiate manual commit
   As a schedules user
   I should be able to initiate a commit manually for a carrier.
@@ -17,3 +17,5 @@ Feature: Initiate manual commit
     Examples:
       | carrier | version    |
       | ZZ      | Training 2 |
+
+    

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: Tests.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 26.978 sec <<< FAILURE!
+And Iam on \"schedules\" menu(| ZZ | Training 2 |)  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
+	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
+	at ?.And Iam on "schedules" menu(Commit.feature:10)
+| ZZ | Training 2 |  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
+	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
+	at ?.And Iam on "schedules" menu(Commit.feature:10)

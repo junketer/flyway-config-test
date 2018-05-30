@@ -7,50 +7,50 @@ import org.openqa.selenium.By;
 public class LoginPage extends BasePage {
 
     private By signOutButton = By.cssSelector("img[src='images/buttons/signout.gif']");
-    private String schedulesUrl = "http://uk01ut05wwutc/TopBar/login.do";
+    //    private String schedulesUrl = "http://uk01ut05wwutc/TopBar/login.do";
     private By usernameField = By.name("j_username");
     private By passwordField = By.name("j_password");
-    private By signInButton =  By.xpath("//*[@src='images/buttons/signin.gif']");
+    private By signInButton = By.xpath("//*[@src='images/buttons/signin.gif']");
 
-//Navigateing to the schedules url
+    //Navigateing to the schedules url
     public void naviagetToSchedules()
         {
-        goTourl(schedulesUrl);
-        Assert.assertEquals("http://uk01ut05wwutc/TopBar/login.do", getCuirrentUrl());
+        goTourl(System.getProperty("baseUrl"));
+        Assert.assertEquals(System.getProperty("baseUrl") + "login.do", getCuirrentUrl());
         }
 
-//        Check if the user is logged in
+    //        Check if the user is logged in
     public boolean isUserLoggedin()
         {
 
-        if (getCuirrentUrl().equals("\"http://uk01ut05wwutc/TopBar/\"")) {
+        if (getCuirrentUrl().equals(System.getProperty("baseUrl"))) {
             return true;
         }
         return false;
         }
-//Do a default login
+
+    //Do a default login
     public void defaultLogin()
         {
 
 
-        login("Agauravelly", "Password88");
+        login(System.getProperty("username"), System.getProperty("password"));
 
         }
 
-//Login to the schedules
+    //Login to the schedules
     public void login(String username, String password)
         {
         naviagetToSchedules();
-        assertForAString(schedulesUrl, getCuirrentUrl());
         input(usernameField, username);
         input(passwordField, password);
-                click(signInButton);
-        expWaitGForUrltoChange("http://uk01ut05wwutc/TopBar/");
-        Assert.assertEquals("http://uk01ut05wwutc/TopBar/", getCuirrentUrl());
+        click(signInButton);
+        expWaitGForUrltoChange(System.getProperty("baseUrl"));
+        Assert.assertEquals(System.getProperty("baseUrl"), getCuirrentUrl());
 
         }
 
-//        Log in if the user is not logge din already
+    //        Log in if the user is not logge din already
     public void loginIfUserisNotLoggedIn()
         {
         if (!isUserLoggedin()) {

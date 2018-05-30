@@ -62,17 +62,17 @@
     </dependencies>
     <profiles>
         <profile>
-            <id>test</id>
+            <id>uat</id>
             <properties>
-                <baseUrl></baseUrl>
-                <username></username>
-                <password></password>
+                <baseUrl>http://uk01ut05wwutc/TopBar/</baseUrl>
+                <username>Automation1</username>
+                <password>Password99</password>
             </properties>
         </profile>
         <profile>
-            <id>live</id>
+            <id>prod</id>
             <properties>
-                <baseUrl></baseUrl>
+                <baseUrl>http://database.oag.com/TopBar/</baseUrl>
                 <username></username>
                 <password></password>
             </properties>
@@ -85,9 +85,9 @@
                 <version>2.10</version>
                 <configuration>
                     <systemPropertyVariables>
-                        <baseUrl></baseUrl>
-                        <username></username>
-                        <password></password>
+                        <baseUrl>${baseUrl}</baseUrl>
+                        <username>${username}</username>
+                        <password>${password}</password>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
