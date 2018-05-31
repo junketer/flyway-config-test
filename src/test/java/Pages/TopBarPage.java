@@ -107,12 +107,14 @@ public class TopBarPage extends BasePage {
 
     public void clickNtpAdmin()
         {
-        switchToTopBar();
         click(ntpButton);
         switchbacfromFrame();
         switchToApplicationFrameset();
 
         }
+//        Check if user is on NTP7 menu
+
+
 //        Click on Admin button
 
     public void clickAdmin()

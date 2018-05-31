@@ -151,7 +151,7 @@ formatter.match({
   "location": "LoginTests.iamLoggedIn()"
 });
 formatter.result({
-  "duration": 5597084249,
+  "duration": 5920497396,
   "status": "passed"
 });
 formatter.match({
@@ -164,7 +164,7 @@ formatter.match({
   "location": "IteneraryCheckTests.iamOnMenu(String)"
 });
 formatter.result({
-  "duration": 1724671980,
+  "duration": 1676516293,
   "status": "passed"
 });
 formatter.match({
@@ -185,16 +185,15 @@ formatter.match({
   "location": "IteneraryCheckTests.iSearchForWithWithRSD(String,String,String)"
 });
 formatter.result({
-  "duration": 4305916011,
+  "duration": 4031321893,
   "status": "passed"
 });
 formatter.match({
   "location": "IteneraryCheckTests.iEditAndSaveEachItenerary()"
 });
 formatter.result({
-  "duration": 25261048729,
-  "error_message": "org.openqa.selenium.JavascriptException: Error executing JavaScript\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027UK03-101883\u0027, ip: \u002710.3.21.158\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_171\u0027\nDriver info: org.openqa.selenium.ie.InternetExplorerDriver\nCapabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}\nSession ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1405)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$400(ExpectedConditions.java:44)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1393)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1389)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)\r\n\tat Pages.BasePage.waitForElementToDissappear(BasePage.java:188)\r\n\tat Pages.BasePage.clickBreadCrumbsByName(BasePage.java:363)\r\n\tat Pages.IteneraryPage.clickOnRouteSummary(IteneraryPage.java:80)\r\n\tat Pages.IteneraryPage.editAndSaveItenerary(IteneraryPage.java:30)\r\n\tat Tests.IteneraryCheckTests.iEditAndSaveEachItenerary(IteneraryCheckTests.java:36)\r\n\tat ✽.And I  edit and  save each itenerary(Commit.feature:12)\r\n",
-  "status": "failed"
+  "duration": 159515650691,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -206,7 +205,8 @@ formatter.match({
   "location": "Upmtests.iClickOnMenu(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1121954041,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -218,7 +218,8 @@ formatter.match({
   "location": "Upmtests.iClickOnMenu(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 8967027341,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -234,12 +235,11 @@ formatter.match({
   "location": "Upmtests.iShouldBeAbleToInitiateCommitForWith(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 13645746569,
+  "status": "passed"
 });
-formatter.write("Failed Scenario: Initiate the commit");
-formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 204490297,
+  "duration": 145632,
   "status": "passed"
 });
 });

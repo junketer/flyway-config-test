@@ -24,7 +24,7 @@ public class IteneraryCheckTests {
                 break;
 
             case "ntp7 admin":
-                sp.clickNtp7Menu();
+                tp.clickNtpAdmin();
                 break;
         }
         }
