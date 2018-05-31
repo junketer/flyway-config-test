@@ -8,6 +8,7 @@ public class Upmtests {
 
     UpmPage up = new UpmPage();
 
+
     @When("^I click on \"([^\"]*)\" menu$")
     public void iClickOnMenu(String arg0) throws Throwable
         {

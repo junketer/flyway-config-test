@@ -9,3 +9,4 @@ Tests\TestRunner.class
 Tests\Upmtests.class
 Pages\LoginPage.class
 Tests\IteneraryCheckTests.class
+Pages\TopBarPage.class

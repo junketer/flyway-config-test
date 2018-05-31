@@ -2,6 +2,7 @@ package Tests;
 
 import Pages.IteneraryPage;
 import Pages.SchedulesPage;
+import Pages.TopBarPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -12,11 +13,20 @@ public class IteneraryCheckTests {
 
     SchedulesPage sp = new SchedulesPage();
     IteneraryPage ip = new IteneraryPage();
+    TopBarPage tp=new TopBarPage();
 
     @Given("^Iam on \"([^\"]*)\" menu$")
     public void iamOnMenu(String arg0) throws Throwable
         {
-        sp.clickSchedules();
+        switch (arg0.toLowerCase()) {
+            case "schedules":
+                tp.navigateToschedules();
+                break;
+
+            case "ntp7 admin":
+                sp.clickNtp7Menu();
+                break;
+        }
         }
 
 

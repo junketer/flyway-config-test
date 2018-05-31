@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="2" name="Tests.TestRunner" time="26.976" errors="0" skipped="5">
+<testsuite tests="8" failures="0" name="Tests.TestRunner" time="38.38" errors="2" skipped="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="cucumber.options" value="--tags @regression"/>
@@ -67,42 +67,99 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="| ZZ | Training 2 |" name="Given Iam logged in" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="And Iam on \&quot;schedules\&quot; menu" time="0.007">
-    <failure type="java.lang.AssertionError">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
-	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
-	at ✽.And Iam on &quot;schedules&quot; menu(Commit.feature:10)
-</failure>
-    <system-out>The status of the schedule stab is ************* http://uk01ut05wwutc/TopBar/images/schedules_off.gif
-http://uk01ut05wwutc/TopBar/images/schedules_off.gifIS THE STATUS OF THE SCHEDULES TAB
+  <testcase classname="| ZZ | Training 2 |" name="And Iam on \&quot;schedules\&quot; menu" time="0"/>
+  <testcase classname="| ZZ | Training 2 |" name="When I search for \&quot;ZZ\&quot; with \&quot;Training 2\&quot; with \&quot;Current Level Only\&quot; RSD" time="0"/>
+  <testcase classname="| ZZ | Training 2 |" name="And I  edit and  save each itenerary" time="0.034">
+    <error message="Error executing JavaScript
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;UK03-101883&apos;, ip: &apos;10.3.21.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b" type="org.openqa.selenium.JavascriptException">org.openqa.selenium.JavascriptException: Error executing JavaScript
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;UK03-101883&apos;, ip: &apos;10.3.21.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)
+	at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1405)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$400(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1393)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1389)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at Pages.BasePage.waitForElementToDissappear(BasePage.java:188)
+	at Pages.BasePage.clickBreadCrumbsByName(BasePage.java:363)
+	at Pages.IteneraryPage.clickOnRouteSummary(IteneraryPage.java:80)
+	at Pages.IteneraryPage.editAndSaveItenerary(IteneraryPage.java:30)
+	at Tests.IteneraryCheckTests.iEditAndSaveEachItenerary(IteneraryCheckTests.java:36)
+	at ✽.And I  edit and  save each itenerary(Commit.feature:12)
+</error>
+    <system-out>Clicked the Flight number ****ZZ 2
+Clicked the itenary number ****002
+Carrier Schedule
+Route Summary
+Clicked the Flight number ****ZZ 3
+Clicked the itenary number ****001
+Clicked the itenary number ****002
+Carrier Schedule
+Route Summary
 </system-out>
   </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="| ZZ | Training 2 |" time="0.007">
-    <failure type="java.lang.AssertionError">java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
-	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
-	at ✽.And Iam on &quot;schedules&quot; menu(Commit.feature:10)
-</failure>
+  <testcase classname="| ZZ | Training 2 |" name="| ZZ | Training 2 |" time="0.035">
+    <error message="Error executing JavaScript
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;UK03-101883&apos;, ip: &apos;10.3.21.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b" type="org.openqa.selenium.JavascriptException">org.openqa.selenium.JavascriptException: Error executing JavaScript
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;UK03-101883&apos;, ip: &apos;10.3.21.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)
+	at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1405)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$400(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1393)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1389)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at Pages.BasePage.waitForElementToDissappear(BasePage.java:188)
+	at Pages.BasePage.clickBreadCrumbsByName(BasePage.java:363)
+	at Pages.IteneraryPage.clickOnRouteSummary(IteneraryPage.java:80)
+	at Pages.IteneraryPage.editAndSaveItenerary(IteneraryPage.java:30)
+	at Tests.IteneraryCheckTests.iEditAndSaveEachItenerary(IteneraryCheckTests.java:36)
+	at ✽.And I  edit and  save each itenerary(Commit.feature:12)
+</error>
   </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="When I search for \&quot;ZZ\&quot; with \&quot;Training 2\&quot; with \&quot;Current Level Only\&quot; RSD" time="0.007">
+  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Update Process Monitor\&quot; menu" time="0.043">
     <skipped/>
   </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="And I  edit and  save each itenerary" time="0.007">
+  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Work In Progress\&quot; menu" time="0.043">
     <skipped/>
   </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Update Process Monitor\&quot; menu" time="0.007">
-    <skipped/>
-  </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Work In Progress\&quot; menu" time="0.011">
-    <skipped/>
-  </testcase>
-  <testcase classname="| ZZ | Training 2 |" name="Then I should be able to initiate commit for \&quot;ZZ\&quot; with \&quot;Training 2\&quot;" time="0.011">
+  <testcase classname="| ZZ | Training 2 |" name="Then I should be able to initiate commit for \&quot;ZZ\&quot; with \&quot;Training 2\&quot;" time="0.044">
     <skipped/>
   </testcase>
 </testsuite>

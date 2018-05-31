@@ -1,20 +1,64 @@
 -------------------------------------------------------------------------------
 Test set: Tests.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 26.978 sec <<< FAILURE!
-And Iam on \"schedules\" menu(| ZZ | Training 2 |)  Time elapsed: 0.007 sec  <<< FAILURE!
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
-	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
-	at ?.And Iam on "schedules" menu(Commit.feature:10)
-| ZZ | Training 2 |  Time elapsed: 0.007 sec  <<< FAILURE!
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at Pages.SchedulesPage.clickSchedules(SchedulesPage.java:80)
-	at Tests.IteneraryCheckTests.iamOnMenu(IteneraryCheckTests.java:19)
-	at ?.And Iam on "schedules" menu(Commit.feature:10)
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 3, Time elapsed: 38.376 sec <<< FAILURE!
+And I  edit and  save each itenerary(| ZZ | Training 2 |)  Time elapsed: 0.034 sec  <<< ERROR!
+org.openqa.selenium.JavascriptException: Error executing JavaScript
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'UK03-101883', ip: '10.3.21.158', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)
+	at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1405)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$400(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1393)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1389)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at Pages.BasePage.waitForElementToDissappear(BasePage.java:188)
+	at Pages.BasePage.clickBreadCrumbsByName(BasePage.java:363)
+	at Pages.IteneraryPage.clickOnRouteSummary(IteneraryPage.java:80)
+	at Pages.IteneraryPage.editAndSaveItenerary(IteneraryPage.java:30)
+	at Tests.IteneraryCheckTests.iEditAndSaveEachItenerary(IteneraryCheckTests.java:36)
+	at ?.And I  edit and  save each itenerary(Commit.feature:12)
+| ZZ | Training 2 |  Time elapsed: 0.035 sec  <<< ERROR!
+org.openqa.selenium.JavascriptException: Error executing JavaScript
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'UK03-101883', ip: '10.3.21.158', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: true, ignoreZoomSetting: true, initialBrowserUrl: http://localhost:25054/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept}
+Session ID: 9bdeba7a-0bb8-49cc-a994-e48eb32e2f4b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:320)
+	at org.openqa.selenium.support.ui.ExpectedConditions.isInvisible(ExpectedConditions.java:1405)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$400(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1393)
+	at org.openqa.selenium.support.ui.ExpectedConditions$46.apply(ExpectedConditions.java:1389)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at Pages.BasePage.waitForElementToDissappear(BasePage.java:188)
+	at Pages.BasePage.clickBreadCrumbsByName(BasePage.java:363)
+	at Pages.IteneraryPage.clickOnRouteSummary(IteneraryPage.java:80)
+	at Pages.IteneraryPage.editAndSaveItenerary(IteneraryPage.java:30)
+	at Tests.IteneraryCheckTests.iEditAndSaveEachItenerary(IteneraryCheckTests.java:36)
+	at ?.And I  edit and  save each itenerary(Commit.feature:12)
