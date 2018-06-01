@@ -12,7 +12,7 @@ public class LoginPage extends BasePage {
     private By passwordField = By.name("j_password");
     private By signInButton = By.xpath("//*[@src='images/buttons/signin.gif']");
 
-    //Navigateing to the schedules url
+    //Navigating to the schedules url
     public void naviagetToSchedules()
         {
         goTourl(System.getProperty("baseUrl"));

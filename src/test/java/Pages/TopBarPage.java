@@ -10,7 +10,7 @@ public class TopBarPage extends BasePage {
     private By referenceButton = By.name("reference");
     private By productsButton = By.name("products");
     private By staffActivityButton = By.name("staffActivity");
-    private By ntpButton = By.name("NTP& admin");
+    private By ntpButton = By.cssSelector("img[title='SchedulesAdmin']");
     private By adminButton = By.name("Admin");
 
     final String TOPBARFRAMENAME = "topbar";
@@ -47,6 +47,7 @@ public class TopBarPage extends BasePage {
     //        Verify if the user is on schedules menu
     public boolean isUseronSchedulesMenu()
         {
+        switchbacfromFrame();
         switchToTopBar();
         if (findElement(schedulesButton).getAttribute("src").contains("schedules_off.gif")) {
             return false;
@@ -105,20 +106,35 @@ public class TopBarPage extends BasePage {
         }
 //        Click on NTP& admin  button
 
-    public void clickNtpAdmin()
+    public void clickNtpAdmin() throws InterruptedException
         {
-        click(ntpButton);
-        switchbacfromFrame();
-        switchToApplicationFrameset();
+        if (!isUseronNtpMenu()) {
+            Thread.sleep(5000);
+            click(ntpButton);
+            Assert.assertTrue("User is still not on NTP Admin", findElement(ntpButton).getAttribute("src").contains("ntp7_admin_on.gif"));
+            switchbacfromFrame();
+            switchToApplicationFrameset();
+        }
 
         }
 //        Check if user is on NTP7 menu
+
+    public boolean isUseronNtpMenu()
+        {
+        switchToTopBar();
+        System.out.println("The source of the " + getTextOfaElement(ntpButton) + " is " + findElement(ntpButton).getAttribute("src"));
+        if (findElement(ntpButton).getAttribute("src").contains("ntp7_admin_off.gif")) {
+            return false;
+        } else
+            return true;
+        }
 
 
 //        Click on Admin button
 
     public void clickAdmin()
         {
+        switchbacfromFrame();
         switchToTopBar();
         click(adminButton);
         switchbacfromFrame();

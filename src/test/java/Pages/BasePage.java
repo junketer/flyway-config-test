@@ -126,7 +126,7 @@ public class BasePage {
         List<WebElement> anchors = currentDriver().findElements(By.tagName("img"));
         System.out.println(anchors.size() + "Total numbe rof images found on the page is ***********");
         for (WebElement anchor : anchors) {
-    //    System.out.println(anchor.getText());
+            //    System.out.println(anchor.getText());
             if (anchor.getAttribute("name").equalsIgnoreCase(value)) {
                 anchor.click();
             }
@@ -202,7 +202,7 @@ public class BasePage {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
         }
 
-   //        Wait for the url to change
+    //        Wait for the url to change
 
     public void expWaitGForUrltoChange(String url)
         {
@@ -212,10 +212,15 @@ public class BasePage {
         }
         }
 
+        public void waitFortextTobePresent(By locator,String text){
+        WebDriverWait wait = new WebDriverWait(currentDriver(), 30);
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,text.toLowerCase()));
+        }
+
     //Switch to an frame
     public void switchToFrame(String frameName)
         {
-   //        waitForFrameExplicitly(frameName);
+        //        waitForFrameExplicitly(frameName);
         currentDriver().switchTo().frame(frameName);
         }
 
@@ -231,7 +236,7 @@ public class BasePage {
         {
         List<WebElement> options = findElement(locator).findElements(By.tagName(tagname));
         for (WebElement option : options) {
-   //            System.out.println(option.getText());
+            //            System.out.println(option.getText());
             Thread.sleep(1000);
             if (option.getText().contains(text)) {
                 option.click();
@@ -245,7 +250,7 @@ public class BasePage {
         }
 
 
-   //        Select by visible text
+    //        Select by visible text
 
     public void selectByValue(By locator, String value)
         {
@@ -379,5 +384,13 @@ public class BasePage {
             }
         }
 
+        }
+
+    //        Confirm a js alert
+    public void confirmAlert()
+        {
+        WebDriverWait wait = new WebDriverWait(currentDriver(), 30);
+        wait.until(ExpectedConditions.alertIsPresent());
+        currentDriver().switchTo().alert().accept();
         }
 }

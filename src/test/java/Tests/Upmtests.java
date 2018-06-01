@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.LeftHandMenuPage;
 import Pages.UpmPage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -7,12 +8,13 @@ import cucumber.api.java.en.When;
 public class Upmtests {
 
     UpmPage up = new UpmPage();
+    LeftHandMenuPage lp = new LeftHandMenuPage();
 
 
     @When("^I click on \"([^\"]*)\" menu$")
     public void iClickOnMenu(String arg0) throws Throwable
         {
-        up.clickOnAMenu(arg0);
+        lp.clickOnAMenu(arg0);
         }
 
     @Then("^I should be in the \"([^\"]*)\" screen$")

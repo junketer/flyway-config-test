@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="Tests.TestRunner" time="195.948" errors="0" skipped="0">
+<testsuite tests="10" failures="2" name="Tests.TestRunner" time="178.362" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="--tags @regression"/>
+    <property name="cucumber.options" value="--tags @Rsdcarrier "/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_171\jre\bin"/>
     <property name="java.vm.version" value="25.171-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
@@ -47,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_171\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Dcucumber.options=--tags @regression -P uat"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install -Dcucumber.options=--tags @Rsdcarrier  -P uat"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -66,12 +66,49 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="| ZZ | Training 2 |" name="Given Iam logged in" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="And Iam on \&quot;schedules\&quot; menu" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="When I search for \&quot;ZZ\&quot; with \&quot;Training 2\&quot; with \&quot;Current Level Only\&quot; RSD" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="And I  edit and  save each itenerary" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Update Process Monitor\&quot; menu" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="When I click on \&quot;Work In Progress\&quot; menu" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="Then I should be able to initiate commit for \&quot;ZZ\&quot; with \&quot;Training 2\&quot;" time="0"/>
-  <testcase classname="| ZZ | Training 2 |" name="| ZZ | Training 2 |" time="0.001"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="Given Iam logged in" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="And Iam on \&quot;ntp7admin\&quot; menu" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="When I click on \&quot;Commit Date Reset\&quot; menu" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="Then I should be able to reset commit date for \&quot;F9\&quot; with \&quot;Schedules\&quot; and \&quot;24MAY18\&quot;" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="And Iam on \&quot;schedules\&quot; menu" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="When I search for \&quot;F9\&quot; with \&quot;Schedules\&quot; with \&quot;Current Level Only\&quot; RSD" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="And I  edit and  save each itenerary" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="When I click on \&quot;Work In Progress\&quot; menu" time="0"/>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="Then I should be able to initiate commit for \&quot;F9\&quot; with \&quot;Schedules\&quot; verifying\&quot;24MAY18\&quot;" time="0.005">
+    <failure message="RSD date is not same" type="java.lang.AssertionError">java.lang.AssertionError: RSD date is not same
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at Pages.UpmPage.initCommitRsdCarrier(UpmPage.java:87)
+	at Tests.NtpTests.iShouldBeAbleToInitiateCommitForWithVerifying(NtpTests.java:22)
+	at ✽.Then I should be able to initiate commit for &quot;F9&quot; with &quot;Schedules&quot; verifying&quot;24MAY18&quot;(CommitDateReset.feature:18)
+</failure>
+    <system-out>18Number of carriers found 
+
+
+0V Vietnam Air Service Company
+Schedules
+2L Helvetic Airways
+Schedules
+AI Air India
+Schedules
+AM Aeromexico
+Schedules
+DD Nok Air
+Schedules
+DT TAAG Angola Airlines
+Test
+F9 Frontier Airlines Inc.
+Schedules
+Found the carrier ** F9 Frontier Airlines Inc.With version **Schedulesat the index of ***7
+</system-out>
+  </testcase>
+  <testcase classname="| F9 | Schedules | 24MAY18 |" name="| F9 | Schedules | 24MAY18 |" time="0.005">
+    <failure message="RSD date is not same" type="java.lang.AssertionError">java.lang.AssertionError: RSD date is not same
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at Pages.UpmPage.initCommitRsdCarrier(UpmPage.java:87)
+	at Tests.NtpTests.iShouldBeAbleToInitiateCommitForWithVerifying(NtpTests.java:22)
+	at ✽.Then I should be able to initiate commit for &quot;F9&quot; with &quot;Schedules&quot; verifying&quot;24MAY18&quot;(CommitDateReset.feature:18)
+</failure>
+  </testcase>
 </testsuite>

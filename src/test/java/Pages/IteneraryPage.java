@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
@@ -19,14 +20,17 @@ public class IteneraryPage extends BasePage {
         waitForElementExplicitly(SchedulesPage.searchResultsarea);
         WebElement area = findElement(SchedulesPage.searchResultsarea);
         List<WebElement> flights = area.findElements(SchedulesPage.flightResults);
-        for (int i = 1; i <= flights.size(); i++) {
+        for (int i = 1; i <= 10; i++) {
             area = findElement(SchedulesPage.searchResultsarea);
             flights = area.findElements(SchedulesPage.flightResults);
             System.out.println("Clicked the Flight number ****" + flights.get(i - 1).getText());
             waitForElementExplicitly(flights.get(i - 1));
+            if(i>8){
+                area.sendKeys(Keys.ARROW_DOWN);
+            }
             flights.get(i - 1).click();
             editEachItenarary();
-            if (i < flights.size()) {
+            if (i <10) {
                 clickOnRouteSummary();
                 waitForElementToBePresent(SchedulesPage.searchResultsarea);
             } else {
@@ -46,18 +50,18 @@ public class IteneraryPage extends BasePage {
         waitForElementExplicitly(SchedulesPage.searchResultsarea);
         WebElement area = findElement(SchedulesPage.searchResultsarea);
         List<WebElement> itenaries = area.findElements(iteneraryResults);
-        for (int i = 1; i <= itenaries.size(); i++) {
-            area = findElement(SchedulesPage.searchResultsarea);
-            itenaries = area.findElements(iteneraryResults);
-//            System.out.println(itenaries.get(i - 1).getText());
-            System.out.println("Clicked the itenary number ****" + itenaries.get(i - 1).getText());
-            waitForElementExplicitly(itenaries.get(i - 1));
-            (itenaries.get(i - 1)).click();
+//        for (int i = 1; i <= itenaries.size(); i++) {
+//            area = findElement(SchedulesPage.searchResultsarea);
+//            itenaries = area.findElements(iteneraryResults);
+////            System.out.println(itenaries.get(i - 1).getText());
+//            System.out.println("Clicked the itenary number ****" + itenaries.get(i - 1).getText());
+            waitForElementExplicitly(itenaries.get(0));
+            (itenaries.get(0)).click();
             clickOnEdit();
             clickSave();
             Thread.sleep(3000);
 
-        }
+//        }
 
         }
 

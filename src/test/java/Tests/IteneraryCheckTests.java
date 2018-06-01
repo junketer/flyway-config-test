@@ -13,21 +13,9 @@ public class IteneraryCheckTests {
 
     SchedulesPage sp = new SchedulesPage();
     IteneraryPage ip = new IteneraryPage();
-    TopBarPage tp=new TopBarPage();
 
-    @Given("^Iam on \"([^\"]*)\" menu$")
-    public void iamOnMenu(String arg0) throws Throwable
-        {
-        switch (arg0.toLowerCase()) {
-            case "schedules":
-                tp.navigateToschedules();
-                break;
 
-            case "ntp7 admin":
-                tp.clickNtpAdmin();
-                break;
-        }
-        }
+
 
 
     @And("^I  edit and  save each itenerary$")
