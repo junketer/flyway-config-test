@@ -22,11 +22,6 @@ public class RunFlyway {
             Flyway flyway=
                     Flyway.configure()
                             .configuration(flywayConfig)
-                           // .dataSource(
-                            //        flywayConfig.getProperty("flyway.url"),
-                              //      flywayConfig.getProperty("flyway.user"),
-                              //      flywayConfig.getProperty("flyway.password"))
-//                            //.defaultSchema("SSIMOUT")
                             .load();
             for (MigrationInfo migrationInfo: flyway.info().pending()) {
                 System.out.println("pending: " + migrationInfo.getDescription());
