@@ -1,8 +1,0 @@
-//TESTED
-val arrIntervalDays = ivListProcessing.addArrIntervalDates(enrichedLegs)
-val with3arrIntervalDays = arrIntervalDays.where(col("arr_interval_days").equalTo(3)).count
-assert(with3arrIntervalDays == 8436)
-
-
-
-

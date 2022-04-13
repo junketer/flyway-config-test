@@ -1,7 +1,0 @@
-//TESTED
-val withLegEndDate = ivListProcessing.addLegSegEffEndDate(enrichedLegs).select("leg_seg_id", "leg_seg_eff_end_date")
-assert( withLegEndDate.where(col("leg_seg_eff_end_date").equalTo("2017-10-24")).count == 38059)
-assert( withLegEndDate.where(col("leg_seg_eff_end_date").equalTo("2017-10-25")).count == 44645)
-assert( withLegEndDate.where(col("leg_seg_eff_end_date").equalTo("2017-10-26")).count == 52231)
-assert( withLegEndDate.where(col("leg_seg_eff_end_date").equalTo("2017-10-27")).count == 123462)
-assert( withLegEndDate.where(col("leg_seg_eff_end_date").equalTo("2017-10-28")).count == 182415)

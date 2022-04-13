@@ -1,6 +1,0 @@
-//TESTED
-val withDepCodes = ivListProcessing.addDepCntryCode(enrichedLegs)
-// compare with:
-// select count(*) from snapshot.wdf_master_data_unenhanced where dep_cntry_cd = 'AE'
-val depCntryCdAEConut = withDepCodes.where(col("dep_cntry_cd").equalTo("AE")).count
-assert(depCntryCdAEConut == 29488)

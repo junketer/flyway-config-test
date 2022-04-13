@@ -1,6 +1,0 @@
-//TESTED
-val withCarrierCd = ivListProcessing.addCarrierCode(enrichedLegs)
-val withCarrierCd0Bcount = withCarrierCd.where(col("carrier_cd").equalTo("0B")).count
-val withCarrierCd7Fcount = withCarrierCd.where(col("carrier_cd").equalTo("7F")).count
-assert(withCarrierCd0Bcount == 4891)
-assert(withCarrierCd7Fcount == 495)
